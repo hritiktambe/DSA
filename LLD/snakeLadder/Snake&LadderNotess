@@ -1,0 +1,24 @@
+Requirements
+
+1.Number of dices ?
+ one but should be scalable
+2. How many snakes and ladder 
+-> able to decide dynamically
+
+3. winning condition
+-> until one of the player wins
+
+
+**objects
+1. dices
+2. snakes
+3. ladder
+4. board
+5. cells
+6. player   
+
+class player
+{
+    string id;
+    int pos;
+}

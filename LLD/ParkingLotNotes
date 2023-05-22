@@ -1,0 +1,114 @@
+
+
+Ask the requirements
+
+car Entrance --> parking --> exit(payment   )
+    (ticket)
+
+
+ #   Requirements clarification
+    parking spot should be nearest to entrance
+
+    how many entrance ?
+     lets do it for entrance ->1
+                    exit -> 1
+    Our code should be scalable if we want it for more than one entrance or exit
+
+    parking floors?
+    for simplicity no floors
+
+
+#Objects      
+1. vehicle
+    a.vehicle number
+    b. vehicle type it will be an enum{2 wheels, 4 wheels}
+
+2. parking spot
+    a. id
+    b. isEmpty
+    c. vehicle
+    d. price
+    e. type
+
+3. entrance gate
+    a. find parking space
+    b. update parking space
+    c. generate ticket
+4. exit gate
+    a.cost calculation
+    b. payment
+    c. update parking spot 
+
+5. ticket
+    a.Entry time
+    b. parking spot type charges
+
+Different type of spot?
+2 wheeler , 4 wheeler
+
+payment ?
+hourly or by minute 
+
+for our qt mix
+
+
+2 approach 
+ ->Top down
+ ->bottom up
+
+ Here we are taking bottom up approach 
+
+
+ <<general class>>
+ class ParkingSpot
+ {
+     int id;
+     bool isEmpty;
+     int price;
+     Vehicle vehicle;
+
+     //getters and setters
+
+     void parkVehicle(Vehicle vehicle)
+     {
+
+     }
+
+     void removeVehicle()
+     {
+          
+     }
+
+ };
+
+ class TwoWheelerParking :public ParkingSpot
+ {
+     TwoWheelerParking()
+     {
+         price = 20;
+     }
+     int getPrice()
+     {
+         return price;
+     }
+
+ };
+
+ class FourWheelerParking : public ParkingSpot
+ {
+     FourWheelerParking()
+     {
+         price = 40;
+     }
+
+     int getPrice()
+     {
+         return price;
+     }
+
+ }; 
+
+ class HandicapParking :public ParkingSpot
+ {
+
+ };

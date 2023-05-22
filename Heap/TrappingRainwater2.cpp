@@ -1,7 +1,7 @@
 /*
 
 https://leetcode.com/problems/trapping-rain-water-ii/submissions/
-
+https://www.youtube.com/watch?v=fywyCy6Fyoo
 */
 
 #include <bits/stdc++.h>
